@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CV de Amado Eugenio Barranco Ordoñez - Especialista en Infraestructura de Software & Ingeniero DevOps / Backend">
+  <title>CV - Amado Eugenio Barranco Ordoñez</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="print.css" media="print">
+</head>
+<body>
+
+  <!-- Barra de acciones: solo visible en pantalla, se oculta al imprimir -->
+  <div class="toolbar">
+    <select id="theme-selector" class="theme-select" aria-label="Seleccionar tema">
+      <optgroup label="Temas claros">
+        <option value="default">Claro (Original)</option>
+        <option value="warm-light">Claro (Cálido)</option>
+        <option value="mint-light">Claro (Menta)</option>
+      </optgroup>
+      <optgroup label="Temas oscuros">
+        <option value="nordic-dark">Oscuro (Nórdico)</option>
+        <option value="dracula-dark">Oscuro (Drácula)</option>
+        <option value="github-dark">Oscuro (GitHub)</option>
+      </optgroup>
+    </select>
+    <button type="button" id="btn-print">Imprimir / Guardar PDF</button>
+  </div>
+
+  <div class="cv">
+
+    <!-- ==================== CABECERA ==================== -->
+    <header class="cv-header">
+      <div class="avatar">
+        AB
+        <img src="foto3guitarra.jpg" alt="Foto de Amado Eugenio Barranco Ordoñez" onerror="this.style.display='none'">
+      </div>
+      <div class="identity">
+        <h1>Amado Eugenio <span>Barranco Ordoñez</span></h1>
+        <p class="role">Especialista en Infraestructura de Software &amp; Ingeniero DevOps / Backend</p>
+      </div>
+    </header>
+
+    <div class="cv-body">
+
+      <!-- ==================== COLUMNA IZQUIERDA ==================== -->
+      <aside class="sidebar">
+
+        <!-- Datos de contacto -->
+        <section class="sec-contacto">
+          <h2>Contacto</h2>
+          <ul class="contact">
+            <li><span class="label">Ubicación:</span> Puebla, Pue., México</li>
+            <li><span class="label">Teléfono:</span> +52 222 544 9827</li>
+            <li><span class="label">Correo:</span> <a href="mailto:amado.ebo@gmail.com">amado.ebo@gmail.com</a></li>
+            <li><span class="label">LinkedIn:</span> <a href="https://www.linkedin.com/in/amado-barranco-2631121b5">amado-barranco-2631121b5</a></li>
+            <li><span class="label">GitHub:</span> <a href="https://github.com/may000mi-dev">may000mi-dev</a></li>
+          </ul>
+        </section>
+
+        <!-- Habilidades técnicas agrupadas -->
+        <section class="sec-habilidades">
+          <h2>Habilidades técnicas</h2>
+
+          <h3>Infraestructura y DevOps</h3>
+          <ul class="skills">
+            <li>Servidores Linux (Ubuntu, Fedora)</li>
+            <li>Docker (contenedores)</li>
+            <li>GitLab CI/CD (Pipelines)</li>
+            <li>Despliegue continuo (Prod/QA/Dev)</li>
+            <li>Droplets (Nubes), SSH</li>
+          </ul>
+
+          <h3>Automatización y Sistema</h3>
+          <ul class="skills">
+            <li>Bash Scripting</li>
+            <li>Systemd</li>
+            <li>Cron jobs (Crontab)</li>
+            <li>Arquitecturas distribuidas</li>
+            <li>Conexión a PLCs (Snap7)</li>
+            <li>NSSM (servicios Windows)</li>
+          </ul>
+
+          <h3>Monitoreo y Caché</h3>
+          <ul class="skills">
+            <li>Redis</li>
+            <li>Memcached</li>
+            <li>Nagios</li>
+            <li>Grafana</li>
+            <li>Loki</li>
+          </ul>
+
+          <h3>Lenguajes</h3>
+          <ul class="skills">
+            <li>Go, Python, PHP, Node.js</li>
+            <li>C# (.NET), C++, Java</li>
+            <li>JavaScript, C</li>
+            <li>Laravel (PHP), Xamarin (C#)</li>
+          </ul>
+
+          <h3>Bases de datos</h3>
+          <ul class="skills">
+            <li>SQL Server, MySQL, Oracle</li>
+            <li>Modelado y procedimientos almacenados</li>
+          </ul>
+
+          <h3>Frontend y herramientas</h3>
+          <ul class="skills">
+            <li>React, React Native</li>
+            <li>HTML5, CSS, WordPress</li>
+            <li>Bubble.io</li>
+            <li>Git / GitHub, VS Code</li>
+          </ul>
+        </section>
+
+        <!-- Idiomas -->
+        <section class="sec-idiomas">
+          <h2>Idiomas</h2>
+          <ul class="skills">
+            <li>Español <span class="level level-high">lengua materna</span></li>
+            <li>Inglés <span class="level level-mid">técnico / básico</span></li>
+          </ul>
+        </section>
+
+      </aside>
+
+      <!-- ==================== COLUMNA PRINCIPAL ==================== -->
+      <main class="main">
+
+        <!-- Perfil profesional -->
+        <section class="sec-perfil">
+          <h2>Perfil profesional</h2>
+          <p>
+            Ingeniero en Ciencias de la Computación con una sólida trayectoria en desarrollo backend,
+            optimización de bases de datos y administración de infraestructura a gran escala. Especialista
+            en la implementación de flujos CI/CD y entornos distribuidos de alta disponibilidad, con
+            experiencia probada gestionando arquitecturas de más de 90 servidores productivos y procesando
+            flujos masivos de datos en tiempo real (+10M de eventos/hora). Experto en la automatización de
+            procesos mediante Bash scripting, diseño de sistemas de caché y seguridad informática,
+            combinando agilidad de desarrollo con estabilidad operativa.
+          </p>
+        </section>
+
+        <!-- Experiencia laboral (más reciente primero) -->
+        <section class="sec-experiencia">
+          <h2>Experiencia laboral</h2>
+
+          <article class="job">
+            <div class="job-head">
+              <h3>Especialista en Infraestructura de Software / Desarrollador Web</h3>
+              <span class="period">Junio 2024 – Agosto 2026</span>
+            </div>
+            <p class="employer">RedGps</p>
+            <ul>
+              <li><strong>Gestión de Infraestructura a Gran Escala:</strong> administrador de más de 90 servidores productivos Linux y entornos cloud (Droplets), asegurando la estabilidad, escalabilidad y disponibilidad de la plataforma de rastreo GPS.</li>
+              <li><strong>Automatización y CI/CD:</strong> diseño, implementación y administración del flujo completo de integración y despliegue continuos mediante Pipelines en GitLab, automatizando entregas de software seguras en entornos de Desarrollo, QA y Producción.</li>
+              <li><strong>Contenerización con Docker:</strong> creación y gestión de contenedores integrados al flujo CI/CD para realizar pruebas controladas de gateways, aislando entornos y garantizando despliegues reproducibles.</li>
+              <li><strong>Procesamiento de Big Data en Tiempo Real:</strong> diseño y optimización de un sistema distribuido en Go y Redis para procesar y alertar sobre flujos masivos de datos (más de 10 millones de tramas GPS por hora).</li>
+              <li><strong>Automatización con Bash Scripting:</strong> desarrollo de scripts avanzados en Bash orientados a consola para optimizar procesos repetitivos, automatizar respaldos y agilizar el despliegue de infraestructura.</li>
+              <li><strong>Orquestación de Servicios y Tareas:</strong> configuración, control y aprovisionamiento de servicios en segundo plano mediante Systemd, así como programación de tareas críticas con Cron jobs.</li>
+              <li><strong>Optimización de Rendimiento (Caching):</strong> implementación de estrategias de caché avanzadas con Memcached y Redis para centralizar configuraciones críticas y mitigar la carga en bases de datos.</li>
+              <li><strong>Monitoreo y Ciberseguridad:</strong> configuración de sistemas de monitoreo con Nagios, Grafana y Loki mediante daemons personalizados en Python y PHP. Colaboración directa con ciberseguridad para la aplicación de parches y refactorización de código en PHP y JavaScript.</li>
+            </ul>
+          </article>
+
+          <article class="job job-no-break">
+            <div class="job-head">
+              <h3>Especialista SCADA / Ingeniero de Software Fullstack</h3>
+              <span class="period">Enero 2023 – Junio 2024</span>
+            </div>
+            <p class="employer">ItSolutions — Asignado a Planta Volkswagen México, Puebla</p>
+            <ul>
+              <li><strong>Administración de Bases de Datos (DBA):</strong> control operativo del área de datos, gestionando y optimizando bases de datos críticas en SQL Server, MySQL y Oracle mediante procedimientos almacenados de alta complejidad.</li>
+              <li><strong>Procesamiento de Datos (ETL):</strong> implementación de herramientas ETL de Microsoft para la extracción, transformación y carga de grandes volúmenes de datos industriales.</li>
+              <li><strong>Desarrollo en Tiempo Real:</strong> diseño y despliegue de múltiples módulos frontend en React para visualización de métricas de producción en tiempo real, e integración de daemons en Python para sistemas de alertas internas.</li>
+              <li><strong>Desarrollo Backend Políglota:</strong> mejoras arquitectónicas y mantenimiento en sistemas backend con un stack diverso (PHP, Go, Node.js, C# y Java).</li>
+            </ul>
+          </article>
+
+          <article class="job job-no-break">
+            <div class="job-head">
+              <h3>Desarrollador .NET</h3>
+              <span class="period">Junio 2022 – Enero 2023</span>
+            </div>
+            <p class="employer">Transportes Marva</p>
+            <ul>
+              <li><strong>Migración Tecnológica:</strong> lideré la transición y modernización de un sistema central heredado (Visual Basic 6) hacia una arquitectura moderna y escalable basada en C# .NET.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <div class="job-head">
+              <h3>Desarrollador .NET</h3>
+              <span class="period">Junio 2020 – Septiembre 2020</span>
+            </div>
+            <p class="employer">GFD Systems</p>
+            <ul>
+              <li><strong>Desarrollo de Software Educativo:</strong> participación en la creación de un sistema de gestión escolar y módulos de exámenes interactivos.</li>
+              <li><strong>Desarrollo Técnico:</strong> diseño y mantenimiento de APIs REST en C# .NET y creación de componentes frontend dinámicos con JavaScript (Axios), HTML5 y CSS.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <div class="job-head">
+              <h3>Administrador de Sitio Web y Mentor</h3>
+              <span class="period">2018 – 2019</span>
+            </div>
+            <p class="employer">BUAP — Servicio Social y Prácticas</p>
+            <ul>
+              <li>Administración y actualización del portal web de la Secretaría Académica de la Facultad de Ciencias de la Computación.</li>
+              <li>Coordinación, liderazgo y capacitación de nuevos equipos de practicantes en el área.</li>
+            </ul>
+          </article>
+
+        </section>
+
+        <!-- Educación -->
+        <section class="sec-educacion">
+          <h2>Educación</h2>
+          <article class="job">
+            <div class="job-head">
+              <h3>Licenciatura en Ingeniería en Ciencias de la Computación</h3>
+              <span class="period">2013 – 2019</span>
+            </div>
+            <p class="employer">Benemérita Universidad Autónoma de Puebla (BUAP)</p>
+          </article>
+        </section>
+
+        <!-- Intereses y experiencia adicional -->
+        <section class="sec-intereses">
+          <h2>Intereses y experiencia adicional</h2>
+          <ul class="job">
+            <li><strong>Gestión de Proyectos Musicales:</strong> compositor, multiinstrumentista y exdirector de agrupación musical.</li>
+            <li><strong>Emprendimiento Familiar:</strong> conocimiento y práctica en la elaboración y venta de pan artesanal tradicional.</li>
+          </ul>
+        </section>
+
+      </main>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

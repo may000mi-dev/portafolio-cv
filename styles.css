@@ -1,0 +1,518 @@
+/* ==========================================================================
+   CV - Amado Eugenio Barranco Ordoñez
+   Estilo: clásico sobrio (blanco, tipografía limpia, acentos azul/teal)
+   Optimizado para pantalla y para impresión / exportar a PDF.
+
+   Temas vía CSS Custom Properties + atributo [data-theme] en <html>.
+   El tema se cambia solo desde script.js; aquí solo se declaran colores.
+   La impresión SIEMPRE usa el tema claro original (ver @media print).
+   ========================================================================== */
+
+/* ============================ VARIABLES DE TEMA ============================ */
+
+/* --- Tema por defecto: Claro Original (también se usa en impresión) --- */
+:root {
+  --bg-color: #f3f4f6;            /* fondo de página */
+  --surface-color: #ffffff;       /* tarjeta del CV */
+  --surface-header: #ecfeff;      /* cabecera */
+  --surface-sidebar: #f9fafb;     /* columna izquierda */
+  --text-color: #1f2937;          /* texto principal */
+  --muted-color: #6b7280;         /* texto secundario */
+  --accent-color: #0e7490;        /* acentos / títulos */
+  --accent-contrast: #ffffff;     /* texto sobre el acento */
+  --border-color: #e5e7eb;        /* separadores y líneas */
+  --toolbar-bg: #1f2937;          /* barra superior */
+  --toolbar-text: #ffffff;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --badge-high-bg: #ccfbf1;       /* badges de nivel */
+  --badge-high-color: #0f766e;
+  --badge-mid-bg: #fef3c7;
+  --badge-mid-color: #92400e;
+  --font-base: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* --- Tema: Warm Minimalist / Sepia Soft (editorial, claro) --- */
+[data-theme="warm-light"] {
+  --bg-color: #F5F2EB;
+  --surface-color: #FDFBF7;
+  --surface-header: #F4EDDF;
+  --surface-sidebar: #F5F2EB;
+  --text-color: #2D2B2A;
+  --muted-color: #85796B;
+  --accent-color: #C67A5C;
+  --accent-contrast: #ffffff;
+  --border-color: #E6DFD3;
+  --toolbar-bg: #2D2B2A;
+  --toolbar-text: #FDFBF7;
+  --shadow: 0 4px 20px rgba(45, 43, 42, 0.10);
+  --badge-high-bg: #F2E1D1;
+  --badge-high-color: #A4552F;
+  --badge-mid-bg: #F2EAD6;
+  --badge-mid-color: #8C6239;
+}
+
+/* --- Tema: Mint Tech / Fresh Developer (startup, claro) --- */
+[data-theme="mint-light"] {
+  --bg-color: #F1F5F9;
+  --surface-color: #F8FAFC;
+  --surface-header: #ECFDF5;
+  --surface-sidebar: #F1F5F9;
+  --text-color: #0F172A;
+  --muted-color: #64748B;
+  --accent-color: #059669;
+  --accent-contrast: #ffffff;
+  --border-color: #E2E8F0;
+  --toolbar-bg: #0F172A;
+  --toolbar-text: #ffffff;
+  --shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+  --badge-high-bg: #D1FAE5;
+  --badge-high-color: #047857;
+  --badge-mid-bg: #FEF3C7;
+  --badge-mid-color: #92400E;
+}
+
+/* --- Tema: Nordic Terminal (gris azulado, oscuro) --- */
+[data-theme="nordic-dark"] {
+  --bg-color: #1E2530;
+  --surface-color: #252D3A;
+  --surface-header: #2B3544;
+  --surface-sidebar: #252D3A;
+  --text-color: #E5E9F0;
+  --muted-color: #9AA5B8;
+  --accent-color: #88C0D0;
+  --accent-contrast: #1E2530;
+  --border-color: #3B4252;
+  --toolbar-bg: #1E2530;
+  --toolbar-text: #E5E9F0;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --badge-high-bg: rgba(136, 192, 208, 0.15);
+  --badge-high-color: #88C0D0;
+  --badge-mid-bg: rgba(235, 203, 139, 0.15);
+  --badge-mid-color: #EBCB8B;
+}
+
+/* --- Tema: Dracula / Cyberpunk Muted (DevOps, oscuro) --- */
+[data-theme="dracula-dark"] {
+  --bg-color: #181824;
+  --surface-color: #1F1F2E;
+  --surface-header: #262637;
+  --surface-sidebar: #1F1F2E;
+  --text-color: #F8F8F2;
+  --muted-color: #9A9AB0;
+  --accent-color: #BD93F9;
+  --accent-contrast: #181824;
+  --border-color: #282A36;
+  --toolbar-bg: #181824;
+  --toolbar-text: #F8F8F2;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --badge-high-bg: rgba(80, 250, 123, 0.15);
+  --badge-high-color: #50FA7B;
+  --badge-mid-bg: rgba(241, 250, 140, 0.15);
+  --badge-mid-color: #F1FA8C;
+}
+
+/* --- Tema: GitHub Dark Mode (estándar de la industria, oscuro) --- */
+[data-theme="github-dark"] {
+  --bg-color: #0d1117;
+  --surface-color: #161b22;
+  --surface-header: #1b232d;
+  --surface-sidebar: #161b22;
+  --text-color: #c9d1d9;
+  --muted-color: #8b949e;
+  --accent-color: #58a6ff;
+  --accent-contrast: #0d1117;
+  --border-color: #21262d;
+  --toolbar-bg: #0d1117;
+  --toolbar-text: #c9d1d9;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --badge-high-bg: rgba(63, 185, 80, 0.15);
+  --badge-high-color: #3fb950;
+  --badge-mid-bg: rgba(210, 153, 34, 0.15);
+  --badge-mid-color: #d29922;
+}
+
+/* ================================ BASE ================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-base);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+/* ============================ BARRA DE ACCIONES ============================ */
+/* Solo visible en pantalla; no debe aparecer en el PDF */
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--toolbar-bg);
+  color: var(--toolbar-text);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+/* Selector de tema y botón de impresión comparten estilo */
+.theme-select,
+.toolbar button {
+  background: var(--accent-color);
+  color: var(--accent-contrast);
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: var(--font-base);
+  transition: filter 0.2s ease;
+}
+
+.theme-select {
+  padding: 8px 10px;
+}
+
+.theme-select:hover,
+.toolbar button:hover {
+  filter: brightness(0.9);
+}
+
+/* ================================ CONTENEDOR =============================== */
+/* Hoja del CV: ancho de carta (A4 aproximado) centrado */
+.cv {
+  max-width: 900px;
+  margin: 24px auto;
+  background: var(--surface-color);
+  box-shadow: var(--shadow);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* ================================ CABECERA =============================== */
+.cv-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 32px 40px;
+  background: var(--surface-header);
+  border-bottom: 3px solid var(--accent-color);
+}
+
+/* Avatar con iniciales como respaldo y fotografía por encima */
+.avatar {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  color: var(--accent-contrast);
+  font-size: 32px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.avatar img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.identity h1 {
+  font-size: 28px;
+  color: var(--text-color);
+  letter-spacing: 0.5px;
+}
+
+.identity h1 span {
+  color: var(--accent-color);
+}
+
+.identity .role {
+  font-size: 16px;
+  color: var(--accent-color);
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.identity .tagline {
+  color: var(--muted-color);
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* =========================== CUERPO DE DOS COLUMNAS =========================== */
+.cv-body {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 0;
+}
+
+/* ================================ SIDEBAR =============================== */
+.sidebar {
+  background: var(--surface-sidebar);
+  padding: 28px 24px;
+  border-right: 1px solid var(--border-color);
+}
+
+.sidebar section + section {
+  margin-top: 24px;
+}
+
+/* Títulos de sección en ambas columnas */
+.sidebar h2,
+.main h2 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--accent-color);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 6px;
+  margin-bottom: 12px;
+}
+
+/* Subtítulos dentro del sidebar (grupos de skills) */
+.sidebar h3 {
+  font-size: 13px;
+  color: var(--muted-color);
+  margin: 14px 0 6px;
+}
+
+/* Lista de contacto */
+.contact {
+  list-style: none;
+  font-size: 13.5px;
+}
+
+.contact li {
+  margin-bottom: 6px;
+}
+
+.contact .label {
+  font-weight: 600;
+}
+
+/* Listas de habilidades */
+.skills {
+  list-style: none;
+  font-size: 13.5px;
+}
+
+.skills li {
+  padding: 3px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+/* Etiqueta de nivel: pequeño badge con color según dominio */
+.level {
+  font-size: 10.5px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+  text-transform: lowercase;
+}
+
+.level-high {
+  background: var(--badge-high-bg);
+  color: var(--badge-high-color);
+}
+
+.level-mid {
+  background: var(--badge-mid-bg);
+  color: var(--badge-mid-color);
+}
+
+/* ================================ MAIN =============================== */
+.main {
+  padding: 28px 32px;
+}
+
+.main section + section {
+  margin-top: 28px;
+}
+
+/* Párrafos del perfil */
+.main p {
+  color: var(--text-color);
+}
+
+/* Entrada de experiencia / educación */
+.job {
+  margin-bottom: 20px;
+}
+
+.job:last-child {
+  margin-bottom: 0;
+}
+
+.job-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.job h3 {
+  font-size: 15.5px;
+  color: var(--text-color);
+}
+
+.period {
+  font-size: 12px;
+  color: var(--muted-color);
+  font-style: italic;
+  white-space: nowrap;
+}
+
+.employer {
+  font-weight: 600;
+  color: var(--accent-color);
+  margin: 2px 0 8px;
+  font-size: 14px;
+}
+
+.job ul {
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+.job li {
+  margin-bottom: 4px;
+}
+
+/* Lista usada como elemento independiente (ej. intereses) */
+ul.job {
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+ul.job li {
+  margin-bottom: 4px;
+}
+
+/* ============================ VISTA IMPRESIÓN ============================
+   Los estilos de impresión / PDF viven en print.css
+   (cargado con media="print") para mantener el layout de 2 columnas
+   tipo web en 2 páginas.
+   ========================================================================== */
+
+/* ============================ PANTALLAS PEQUEÑAS ============================
+   Diseño responsivo en dos etapas:
+   1) <= 960px (tablets / pantallas medianas): compacta espacios y foto.
+   2) <= 720px (móviles): una sola columna, contenido principal primero.
+   Se limitan a `screen` para no interferir con la impresión. */
+@media screen and (max-width: 960px) {
+  .cv {
+    margin: 16px auto;
+  }
+
+  .cv-header {
+    padding: 24px 28px;
+    gap: 16px;
+  }
+
+  .avatar {
+    width: 110px;
+    height: 110px;
+  }
+
+  .identity h1 {
+    font-size: 24px;
+  }
+
+  .sidebar {
+    padding: 24px 20px;
+  }
+
+  .main {
+    padding: 24px;
+  }
+
+  .cv-body {
+    grid-template-columns: 260px 1fr;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  body {
+    font-size: 14px;
+  }
+
+  .cv {
+    margin: 10px;
+    border-radius: 6px;
+  }
+
+  /* Una sola columna: primero el contenido principal (perfil/experiencia)
+     y al final la barra lateral (contacto/habilidades/idiomas) */
+  .cv-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main {
+    order: 1;
+  }
+
+  .sidebar {
+    order: 2;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .cv-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 16px;
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .identity h1 {
+    font-size: 22px;
+  }
+
+  .identity .role {
+    font-size: 14px;
+  }
+
+  .identity .tagline {
+    font-size: 13px;
+  }
+
+  .main {
+    padding: 20px 16px;
+  }
+
+  /* Barra superior: centrada y permitiendo que los controles
+     se acomoden en varias líneas en pantallas muy angostas */
+  .toolbar {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .theme-select,
+  .toolbar button {
+    font-size: 13px;
+    padding: 7px 12px;
+  }
+}
