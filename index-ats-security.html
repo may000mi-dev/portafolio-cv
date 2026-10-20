@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CV de Amado Eugenio Barranco Ordoñez - Especialista en Ciberseguridad e Infraestructura Segura / Ingeniero de Seguridad & DevOps">
+  <title>CV (ATS) - Amado Eugenio Barranco Ordoñez | Ciberseguridad</title>
+  <style>
+    /* ======================================================================
+       VERSIÓN ATS - 1 columna, sin imágenes, sin tablas, texto lineal.
+       Pensada para portales de empleo y filtros automáticos (ATS).
+       ====================================================================== */
+
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11pt;
+      line-height: 1.45;
+      color: #111;
+      background: #fff;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 24px 28px;
+    }
+
+    a { color: #111; }
+
+    h1 {
+      font-size: 18pt;
+      margin: 0 0 4px;
+      letter-spacing: 0.3px;
+    }
+
+    .role {
+      font-size: 11pt;
+      font-weight: bold;
+      margin: 0 0 10px;
+    }
+
+    .contact {
+      margin: 0 0 16px;
+      padding: 0 0 12px;
+      border-bottom: 1px solid #999;
+    }
+
+    .contact span { display: block; }
+
+    h2 {
+      font-size: 12pt;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin: 18px 0 6px;
+      border-bottom: 1px solid #999;
+      padding-bottom: 2px;
+    }
+
+    h3 { font-size: 11pt; margin: 12px 0 2px; }
+
+    p { margin: 0 0 8px; }
+
+    ul { margin: 4px 0 10px; padding-left: 18px; }
+
+    li { margin-bottom: 4px; }
+
+    .meta {
+      font-size: 10pt;
+      color: #333;
+      margin: 0 0 4px;
+    }
+
+    .period { font-weight: normal; }
+
+    .skills-line { margin: 0 0 4px; }
+
+    /* Barra de acción: solo visible en pantalla */
+    .toolbar {
+      max-width: 800px;
+      margin: 0 auto 16px;
+      padding: 0 28px;
+    }
+
+    .toolbar button {
+      font: inherit;
+      padding: 8px 14px;
+      cursor: pointer;
+    }
+
+    @media print {
+      .toolbar { display: none !important; }
+      body { max-width: 100%; padding: 0; font-size: 10.5pt; }
+      a { text-decoration: none; }
+      h2 { break-after: avoid; }
+      .job { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <button type="button" onclick="window.print()">Imprimir / Guardar PDF</button>
+  </div>
+
+  <header>
+    <h1>Amado Eugenio Barranco Ordoñez</h1>
+    <p class="role">Especialista en Ciberseguridad e Infraestructura Segura / Ingeniero de Seguridad &amp; DevOps</p>
+    <div class="contact">
+      <span>Puebla, Pue., México</span>
+      <span>Teléfono: +52 222 544 9827</span>
+      <span>Correo: amado.ebo@gmail.com</span>
+      <span>LinkedIn: https://linkedin.com/in/amado-barranco-2631121b5</span>
+      <span>GitHub: https://github.com/may000mi-dev</span>
+    </div>
+  </header>
+
+  <section>
+    <h2>Resumen profesional</h2>
+    <p>
+      Ingeniero en Ciencias de la Computación con más de 4 años de experiencia en gestión, hardening y aseguramiento
+      de infraestructura distribuida a gran escala (90+ servidores productivos). Especialista en respuesta a incidentes
+      en caliente, monitoreo y correlación de eventos de seguridad (SIEM/SOC), mitigación de amenazas en capas de
+      aplicación web/servidores y automatización de despliegues seguros (DevSecOps / CI/CD). Amplia trayectoria
+      diseñando arquitecturas resilientes capaces de procesar flujos masivos de datos en tiempo real (10M+ eventos/hora)
+      bajo estrictos controles de disponibilidad y control de acceso (IAM).
+    </p>
+  </section>
+
+  <section>
+    <h2>Experiencia laboral</h2>
+
+    <article class="job">
+      <h3>Especialista en Infraestructura Segura y Ciberseguridad / DevSecOps</h3>
+      <p class="meta">RedGps — <span class="period">Junio 2024 – Agosto 2026</span></p>
+      <ul>
+        <li>Respuesta a Incidentes y Contención de Amenazas (Blue Team / SOC): Lideré la detección y contención en caliente de un vector de ataque web (web shell inyectada mediante subida maliciosa de archivos SVG/PHP). Aislé y encapsulé la infraestructura afectada, mitigando conexiones remotas no autorizadas, realizando análisis forense básico y aplicando técnicas de hardening para prevenir escalaciones de privilegios.</li>
+        <li>Gestión y Hardening de Infraestructura (90+ Servidores): Administré y aseguré el perímetro de más de 90 servidores Linux (Ubuntu, Droplets). Implementé políticas de menor privilegio (IAM), bastion hosts, endurecimiento de servicios mediante SSH, Systemd y aislamiento de redes locales.</li>
+        <li>Monitoreo de Seguridad y Gestión de Logs (SOC / SIEM): Diseñé y configuré dashboards de observabilidad y seguridad utilizando Grafana, Loki y Nagios impulsados por daemons en Python/PHP, permitiendo la detección temprana de anomalías, ataques de fuerza bruta y patrones de tráfico sospechoso.</li>
+        <li>Seguridad en CI/CD y Contenerización (DevSecOps): Automaticé flujos de integración y despliegue continuo en GitLab CI/CD incorporando aislamiento de entornos de prueba mediante contenedores Docker, garantizando el análisis y validación previa a la liberación en producción.</li>
+        <li>Automatización y Procesamiento Seguro: Desarrollé un sistema distribuido en Go y Redis para la ingesta y correlación en tiempo real de más de 10M de eventos/hora, e implementé scripts avanzados en Bash para automatización de parches de seguridad, backups cifrados y gestión de estado.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <h3>Ingeniero de Seguridad de Software &amp; Fullstack / Especialista SCADA</h3>
+      <p class="meta">ItSolutions (Asignado a Planta Volkswagen México, Puebla) — <span class="period">Enero 2023 – Junio 2024</span></p>
+      <ul>
+        <li>Hardening y Gobierno de Datos (DBA): Administré y aseguré bases de datos críticas (SQL Server, MySQL, Oracle), aplicando principios de IAM, control de acceso basado en roles (RBAC) y sanitización de procedimientos almacenados para prevenir ataques de inyección SQL (SQLi).</li>
+        <li>Alertamiento y Monitoreo Industrial en Tiempo Real: Diseñé e integré daemons en Python para el monitoreo continuo de sistemas industriales, emitiendo alertas inmediatas ante fallas o comportamientos fuera de norma.</li>
+        <li>Integración y ETL de Datos Críticos: Implementé procesos de extracción, transformación y carga (ETL) seguros para la consolidación de métricas de producción.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <h3>Desarrollador .NET / Migración de Sistemas</h3>
+      <p class="meta">Transportes Marva — <span class="period">Junio 2022 – Enero 2023</span></p>
+      <ul>
+        <li>Lideré la migración y modernización de un sistema legado (VB6) a una arquitectura segura en C# .NET, eliminando vulnerabilidades de código antiguo y refactorizando el manejo de autenticación.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <h3>Desarrollador .NET</h3>
+      <p class="meta">GFD Systems — <span class="period">Junio 2020 – Septiembre 2020</span></p>
+      <ul>
+        <li>Desarrollo e implementación de APIs REST seguras en C# .NET y validación de endpoints.</li>
+      </ul>
+    </article>
+  </section>
+
+  <section>
+    <h2>Educación y Formación</h2>
+    <article class="job">
+      <h3>Licenciatura en Ingeniería en Ciencias de la Computación</h3>
+      <p class="meta">Benemérita Universidad Autónoma de Puebla (BUAP) — <span class="period">2013 – 2019</span></p>
+    </article>
+  </section>
+
+  <section>
+    <h2>Habilidades Técnicas</h2>
+    <ul>
+      <li><strong>Seguridad e Infraestructura (Blue Team / Hardening):</strong> Respuesta a Incidentes, Hardening de Linux (Ubuntu, Fedora), Control de Acceso (IAM / RBAC), SSH, Segmentación de Redes, Reglas de Firewalls, Detección de Web Shells y Vulnerabilidades OWASP (SQLi, File Upload).</li>
+      <li><strong>Monitoreo y SIEM / Observabilidad:</strong> Grafana, Loki, Nagios, Correlación de Logs, Detección de Anomalías, Redis, Memcached.</li>
+      <li><strong>DevSecOps e Nube:</strong> GitLab CI/CD, Docker (Contenerización segura), Droplets (Cloud Security), Bash Scripting, Systemd, Cron Jobs.</li>
+      <li><strong>Lenguajes y Scripting:</strong> Python, Bash, Go, PHP, C# (.NET), SQL, C++, JavaScript.</li>
+      <li><strong>Bases de Datos:</strong> SQL Server, MySQL, Oracle.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Idiomas</h2>
+    <ul>
+      <li>Español: Nativo</li>
+      <li>Inglés: B2 (Técnico y Profesional para Negocios)</li>
+    </ul>
+  </section>
+
+</body>
+</html>
